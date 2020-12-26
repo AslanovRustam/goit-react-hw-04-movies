@@ -6,6 +6,7 @@ import HomeView from "./views/Home";
 import MoviesView from "./views/Movies";
 import NotFoundView from "./views/NotFoundView";
 import MovieDetailsPage from "./views/MovieDetailsPage/MovieDetailsPage";
+import MoviesCasts from "./views/Credits/Credits";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         <Route path="/movies/:movieId">
           <MovieDetailsPage />
         </Route>
+        {/* <Route>
+          <MoviesCasts />
+        </Route> */}
         <Route>
           <NotFoundView />
         </Route>
