@@ -48,3 +48,19 @@
 .item {
   padding-left: 0;
 }
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 18px;
+}
+.link:hover {
+  color: forestgreen;
+}
+.activeLink {
+  composes: link;
+  color: #470ee6;
+}

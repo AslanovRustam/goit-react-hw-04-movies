@@ -4,9 +4,10 @@ import { fetchMoviesCasts, POSTER_URL } from "../../services/MoviesApi";
 import { useParams } from "react-router-dom";
 import s from "../Credits/Credits.module.css";
 
-export default function MoviesCasts({ movieId }) {
+export default function MoviesCasts({ movie }) {
   const [cast, setCast] = useState([]);
   const { url } = useRouteMatch();
+  const { movieId } = useParams();
   console.log(url);
   useEffect(() => {
     fetchMoviesCasts(movieId).then((request) => setCast(request.cast));
