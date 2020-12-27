@@ -1,4 +1,5 @@
 import s from "../views/stylesViews.module.css";
+import { toast } from "react-toastify";
 
 export default function MoviesView() {
   return (
