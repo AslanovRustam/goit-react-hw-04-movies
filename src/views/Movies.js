@@ -1,19 +1,22 @@
-import s from "../views/stylesViews.module.css";
-import { toast } from "react-toastify";
+// import MovieDetailsPage from "./MovieDetailsPage/MovieDetailsPage";
+import { useState } from "react";
+import { useHistory, useLocation } from "react-router-dom";
+import Searchbar from "./Searchbar";
 
-export default function MoviesView() {
-  return (
-    <>
-      <form>
-        <label>
-          {" "}
-          Please enter the query
-          <input className={s.input}></input>
-          <button type="submit" className={s.button}>
-            Search
-          </button>
-        </label>
-      </form>
-    </>
-  );
+export default function MoviesPage() {
+  const history = useHistory();
+  const location = useLocation();
+  const [filmName, setFilmName] = useState("");
+  const [films, setFilms] = useState([]);
+
+  const searchQuery = (query) => {
+    history.push(...location, (query = `${query}`));
+  };
+
+  const onSubmit = () => {
+    console.log(history);
+    console.log(location);
+    history.push("/");
+  };
+  return <Searchbar onSubmit={onSubmit} />;
 }
