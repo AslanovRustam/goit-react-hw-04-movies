@@ -26,7 +26,7 @@ function Searchbar({ onSubmit }) {
       <input
         className={s.input}
         type="text"
-        name="imageName"
+        name="filmName"
         value={filmName}
         onChange={handleNameChange}
         autocomplete="off"
